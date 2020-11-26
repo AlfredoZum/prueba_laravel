@@ -27,4 +27,29 @@ class EmployeeController extends Controller
 
     }
 
+    public function store( Request $request ){
+
+        $this->validate($request, [
+            'code' => 'required',
+            'name' => 'required',
+            'lastName' => 'required',
+            'maidenName' => 'required',
+            'mail' => 'required|email|',
+            'contract' => 'required',
+        ]);
+        
+        $employee = new Employee;
+        $employee->code = $request->code;
+        $employee->name = $request->name;
+        $employee->last_name = $request->lastName;
+        $employee->maiden_name = $request->maidenName;
+        $employee->mail = $request->mail;
+        $employee->contract = $request->contract;
+        $employee->status = 1; 
+        $employee->save();
+       
+        return redirect('employee');
+            
+    }
+
 }

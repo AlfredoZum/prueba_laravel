@@ -16,10 +16,10 @@
       @foreach ($empleados as $empleado)
         <tr>
           <td>{{ $empleado->id }}</td>
-          <td>{{ $empleado->codigo }}</td>
-          <td>{{ $empleado->nombre }}</td>
-          <td>{{ $empleado->correo }}</td>
-          <td>{{ $empleado->contrato }}</td>
+          <td>{{ $empleado->code }}</td>
+          <td>{{ $empleado->name }}</td>
+          <td>{{ $empleado->mail }}</td>
+          <td>{{ $empleado->contract }}</td>
           
         </tr>
       @endforeach

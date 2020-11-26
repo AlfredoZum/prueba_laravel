@@ -24,3 +24,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/employee', [EmployeeController::class, 'index'] )->name('employee');
 Route::middleware(['auth:sanctum', 'verified'])->get('/employee/create', [EmployeeController::class, 'create'] )->name('employee.create');
+Route::middleware(['auth:sanctum', 'verified'])->post('/employee/store', [EmployeeController::class, 'store'] )->name('employee.store');
+
