@@ -20,4 +20,11 @@ class EmployeeController extends Controller
             return view( 'employee.listEmployee', $data );
 
     }
+
+    public function create(){
+
+        return view( 'employee.create' );
+
+    }
+
 }

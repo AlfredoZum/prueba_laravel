@@ -1,7 +1,7 @@
 
 <div>
 
-  <buttom>Agregar Empleado</buttom>
+  <a href="{{ route('employee.create') }}" >Agregar Empleado</a>
 
   <table>
     <thead>
